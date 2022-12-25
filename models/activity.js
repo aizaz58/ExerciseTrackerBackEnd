@@ -18,7 +18,7 @@ const activitySchema=new mongoose.Schema({
     type:{
         type:String,
         required:true,
-        enum:["run","bicycle ride","swim","walk","hike"]
+        enum:["Run","Bicycle Ride","Swim","Walk","Hike"]
     },
     duration:{
         type:Number,

@@ -11,7 +11,7 @@ router.route("/logIn")
 
 router.route("/refresh").get(logInController.refresh)
 
-router.route("/logout").post(logInController.logOut)
+router.route("/logOut").post(logInController.logOut)
 
 
 

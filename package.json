@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server",
-    "start": "node server"
+    "start": "node server",
+    "debug":"ndb server.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "mongoose-sequence": "^5.3.1"
   },
   "devDependencies": {
+    "ndb": "^1.1.5",
     "nodemon": "^2.0.20"
   }
 }
