@@ -43,8 +43,10 @@ console.log(userId)
 
 
 const editActivity = asyncHandler(async (req, res) => {
-    const activityId=req.params.id
-    const activity=await activityModel.findByIdAndUpdate(activityId,req.body)
+  
+   
+    
+    const activity=await activityModel.findByIdAndUpdate(req.body._id,req.body)
     if(!activity){
         return res.status(400).json({statusText:"fail",message:"something wrong happened."})
     }
@@ -52,6 +54,7 @@ const editActivity = asyncHandler(async (req, res) => {
 });
 const getActivity = asyncHandler(async (req, res) => {
   const activityId=req.params.id
+  console.log(req)
 const activity=await activityModel.findOne({_id:activityId})
 if(!activity){
   return res.status(204).json({statusText:"fail",message:"no acivity found with this id"})

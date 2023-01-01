@@ -46,6 +46,7 @@ app.all('*', (req, res) => {
 //custom middleware for error handling
 app.use(errorHandler)
 
+
 let server
  mongoose.connection.once("open",()=>{
     console.log("datbaseConnected")
