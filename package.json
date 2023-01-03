@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server",
-    "start": "node server",
+    "start": "node server.js",
+  
     "debug":"ndb server.js"
   },
   "author": "",
