@@ -62,7 +62,7 @@ const logInController = asyncHandler(async (req, res) => {
     res.status(200).json({
       statusText: "ok",
       message: `${user.firstName} successfully logged in.`,
-      accessToken: accessToken,user:{email: user.email,
+      accessToken: accessToken,foundUser:{email: user.email,
           firstName: user.firstName,
           lastName: user.lastName,
           id: user._id,}

@@ -2,7 +2,7 @@ const activityModel = require("../models/activity");
 const asyncHandler = require("express-async-handler");
 
 const createActivity = asyncHandler(async (req, res) => {
-  const { name, description, type, duration } = req.body;
+  const { name, description, type, duration,date } = req.body;
   if (!(name && description && type && duration)) {
     return res
       .status(400)
@@ -15,6 +15,7 @@ const createActivity = asyncHandler(async (req, res) => {
     description,
     type,
     duration,
+    date
   };
   const activity = await activityModel.create(activityObj);
 
@@ -52,6 +53,8 @@ const editActivity = asyncHandler(async (req, res) => {
 });
 const getActivity = asyncHandler(async (req, res) => {
   const activityId=req.params.id
+  console.log(req.body)
+  console.log(activityId)
 const activity=await activityModel.findOne({_id:activityId})
 if(!activity){
   return res.status(204).json({statusText:"fail",message:"no acivity found with this id"})
