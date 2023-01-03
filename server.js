@@ -19,9 +19,7 @@ process.on('uncaughtException', err => {
   });
 connectDB()
 //cross origin resource sharing
-app.use(cors({
-    origin:"*"
-}))
+app.use(cors(corsOption))
 // built-in middlewares for handling json and urlencoded  data in post and put requests from req.body
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
