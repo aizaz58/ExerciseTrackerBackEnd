@@ -3,6 +3,8 @@ const allowedOrigins=[
     'http://localhost:5173',
     'http://localhost:3100',
     'https://trackexercise.netlify.app',
+    'https://exerciseapp.code-compiler.com'
+
 
 ]
 
