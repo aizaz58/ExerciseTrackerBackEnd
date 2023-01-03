@@ -55,12 +55,7 @@ const editActivity = asyncHandler(async (req, res) => {
 });
 const getActivity = asyncHandler(async (req, res) => {
   const activityId=req.params.id
-<<<<<<< HEAD
-  console.log(req.body)
-  console.log(activityId)
-=======
-  console.log(req)
->>>>>>> 2c1619c1b0f6459515c0f6f8803f6c038a51d6b4
+  
 const activity=await activityModel.findOne({_id:activityId})
 if(!activity){
   return res.status(204).json({statusText:"fail",message:"no acivity found with this id"})
